@@ -8,11 +8,13 @@ export enum Network {
     POLYGON = 137,
     ARBITRUM = 42161,
     GNOSIS = 100,
+    BSC = 56,
+    BSCTESTNET = 97,
 }
 
 export const SOR_CONFIG: Record<Network, SorConfig> = {
     [Network.MAINNET]: {
-        chainId: Network.MAINNET, //1
+        chainId: Network.MAINNET,
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
         weth: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
         connectingTokens: [
@@ -31,7 +33,7 @@ export const SOR_CONFIG: Record<Network, SorConfig> = {
         },
     },
     [Network.KOVAN]: {
-        chainId: Network.KOVAN, //42
+        chainId: Network.KOVAN,
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
         weth: '0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1',
         connectingTokens: [
@@ -46,7 +48,7 @@ export const SOR_CONFIG: Record<Network, SorConfig> = {
         },
     },
     [Network.GOERLI]: {
-        chainId: Network.GOERLI, //5
+        chainId: Network.GOERLI,
         vault: '0x65748E8287Ce4B9E6D83EE853431958851550311',
         weth: '0x9A1000D492d40bfccbc03f413A48F5B6516Ec0Fd',
         connectingTokens: [
@@ -57,7 +59,7 @@ export const SOR_CONFIG: Record<Network, SorConfig> = {
         ],
     },
     [Network.POLYGON]: {
-        chainId: Network.POLYGON, //137
+        chainId: Network.POLYGON,
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
         weth: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
         connectingTokens: [
@@ -72,7 +74,7 @@ export const SOR_CONFIG: Record<Network, SorConfig> = {
         ],
     },
     [Network.ARBITRUM]: {
-        chainId: Network.ARBITRUM, //42161
+        chainId: Network.ARBITRUM,
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
         weth: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
         connectingTokens: [
@@ -83,13 +85,35 @@ export const SOR_CONFIG: Record<Network, SorConfig> = {
         ],
     },
     [Network.GNOSIS]: {
-        chainId: Network.GNOSIS, //100
+        chainId: Network.GNOSIS,
         vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
         weth: '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1',
         connectingTokens: [
             {
                 symbol: 'weth',
-                address: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+                address: '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1',
+            },
+        ],
+    },
+    [Network.BSC]: {
+        chainId: Network.BSC,
+        vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+        weth: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        connectingTokens: [
+            {
+                symbol: 'weth',
+                address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+            },
+        ],
+    },
+    [Network.BSCTESTNET]: {
+        chainId: Network.BSCTESTNET,
+        vault: '0xBA12222222228d8Ba445958a75a0704d566BF2C8',
+        weth: '0xE906CBeCd4A17DF62B8d6c8C82F3882af25295f5',
+        connectingTokens: [
+            {
+                symbol: 'weth',
+                address: '0xE906CBeCd4A17DF62B8d6c8C82F3882af25295f5',
             },
         ],
     },
@@ -102,6 +126,8 @@ export const PROVIDER_URLS = {
     [Network.POLYGON]: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA}`,
     [Network.ARBITRUM]: `https://arbitrum-mainnet.infura.io/v3/${process.env.INFURA}`,
     [Network.GNOSIS]: `https://poa-xdai.gateway.pokt.network/v1/lb/91bc0e12a76e7a84dd76189d`,
+    [Network.BSC]: `${process.env.BSC_RPC_URL}`,
+    [Network.BSCTESTNET]: `${process.env.BSCTESTNET_RPC_URL}`,
 };
 
 export const MULTIADDR: { [chainId: number]: string } = {

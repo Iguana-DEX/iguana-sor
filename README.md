@@ -36,7 +36,7 @@ Create a .env file in root dir with your infura provider key: `INFURA=your_key`
 
 Install dependencies: `$ yarn install`
 
-Run example: `$ ts-node ./test/testScripts/swapExample.ts`
+Run example: `$ TS_NODE_PROJECT='tsconfig.testing.json' ts-node ./test/testScripts/swapExample.ts`
 
 ## Environment Variables
 

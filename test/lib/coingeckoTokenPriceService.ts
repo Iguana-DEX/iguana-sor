@@ -46,6 +46,8 @@ export class CoingeckoTokenPriceService implements TokenPriceService {
                 return 'ethereum';
             case 42:
                 return 'ethereum';
+            case 56:
+                return 'binance-smart-chain';
             case 137:
                 return 'polygon-pos';
             case 42161:
@@ -63,8 +65,10 @@ export class CoingeckoTokenPriceService implements TokenPriceService {
                 return 'eth';
             case 42:
                 return 'eth';
+            case 56:
+                return 'bnb';
             case 137:
-                return '';
+                return 'matic';
             case 42161:
                 return 'eth';
             case 100:
