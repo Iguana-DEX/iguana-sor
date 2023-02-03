@@ -11,10 +11,11 @@
 
 Smart Order Router, or SOR, is an off-chain linear optimization of routing orders across pools for best price execution.
 
-SOR exists in the Bronze release as a way to aggregate liquidity across all Balancer pools. Future releases of Balancer will accomplish this on-chain and allow aggregate contract fillable liquidity.
+SOR provides a way to aggregate liquidity across all IguanaDEX pools.
 
 Liquidity aggregators are free to use the SOR npm package or create their own order routing across pools.
 
+Information about SOR on Balancer's documentation. IguanaDEX forked this feature of the Balancer Protocol (and many more):
 [Read More](https://docs.balancer.fi/developers/smart-order-router)
 
 ## Overview Of Use And Example
@@ -55,5 +56,3 @@ INFINITESIMAL=0.000001
 ## Note on Licensing
 
 Except where indicated otherwise, the code in this repository is licensed GPLv3.
-
-Superluminal Labs Ltd. is the owner of the directories `balancer-sor/src/pools/gyro2Pool/`, `balancer-sor/src/pools/gyro3Pool/` and `balancer-sor/src/pools/gyroEPool/` and any accompanying files contained herein (collectively, these “Software”). Use of these Software is exclusively subject to the [Gyroscope Pool License](./src/pools/gyroEPool/LICENSE), which is available at the provided link (the “Gyroscope Pool License”). These Software are not covered by the General Public License and do not confer any rights to the user other than the limited rights specified in the Gyroscope Pool License. A special hybrid license between Superluminal Labs Ltd and Balancer Labs OÜ governs Superluminal Labs Ltd's use of the Balancer Labs OÜ code [Special License](./src/pools/gyroEPool/GyroscopeBalancerLicense.pdf), which is available at the provided link. By using these Software, you agree to be bound by the terms and conditions of the Gyroscope Pool License. If you do not agree to all terms and conditions of the Gyroscope Pool License, do not use any of these Software.
